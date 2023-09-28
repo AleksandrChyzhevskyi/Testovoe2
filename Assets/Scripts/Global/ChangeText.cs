@@ -4,8 +4,11 @@ using UnityEngine;
 public class ChangeText : MonoBehaviour
 {
     [SerializeField] private TMP_Text _tmpText;
+    private IWalletPlayer _walletPlayer;
 
-    public void Init(IWalletPlayer walletCoints) =>
-        _tmpText.text = $"Score: {walletCoints.ScoreCoints}";
+    private void Update() => _tmpText.text = $"Score: {_walletPlayer.ScoreCoints}";
+
+    public void Init(IWalletPlayer walletCoints) => 
+        _walletPlayer = walletCoints;
 }
 

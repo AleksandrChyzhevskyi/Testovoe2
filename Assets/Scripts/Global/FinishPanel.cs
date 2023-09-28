@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 
 namespace Global
 {
-    public class FinishPenel : MonoBehaviour
+    public class FinishPanel : MonoBehaviour
     {
         private void Start() =>
             gameObject.SetActive(false);

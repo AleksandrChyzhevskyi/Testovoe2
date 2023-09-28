@@ -1,4 +1,4 @@
 ﻿public interface IWalletPlayer
 {
-    void AddCoin();
+    public int ScoreCoints { get; }
 }

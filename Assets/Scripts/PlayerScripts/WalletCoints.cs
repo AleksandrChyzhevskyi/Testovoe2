@@ -1,7 +1,7 @@
 ﻿public class WalletCoints : IWalletPlayer
 {
-    public int _scoreCoints { get; private set; };
+    public int ScoreCoints { get; private set; } = 0;
 
     public void AddCoin() =>
-        _scoreCoints++;
+        ScoreCoints++;
 }
