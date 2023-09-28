@@ -10,6 +10,7 @@ namespace Global
         private FactoryElements _factoryElements;
         private ChangeText _changeText;
         private FinishPanel _finishPanel;
+        
         private void Awake()
         {
             _finishPanel = GetComponentInChildren<FinishPanel>();

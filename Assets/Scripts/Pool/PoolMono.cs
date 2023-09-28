@@ -5,11 +5,10 @@ using Object = UnityEngine.Object;
 
 public class PoolMono<T> where T : MonoBehaviour
 {
-    public T Prifab  { get; }
+    private List<T> _pool;
+    public T Prifab { get; }
     public bool AutoExpand { get; set; }
     public Transform Container { get; }
-    
-    private List<T> _pool;
 
     public PoolMono(T prifab, int count, Transform conteiner)
     {
@@ -56,7 +55,7 @@ public class PoolMono<T> where T : MonoBehaviour
             return element;
 
         if (AutoExpand)
-           return CreateObject(true);
+            return CreateObject(true);
 
         throw new Exception($"There is no free elements in pool of type {typeof(T)}");
     }

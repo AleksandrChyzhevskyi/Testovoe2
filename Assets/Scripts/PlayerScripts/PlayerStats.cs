@@ -1,6 +1,5 @@
 using System;
 using DefaultNamespace;
-using Global;
 using UnityEngine;
 
 public class PlayerStats : MonoBehaviour
@@ -17,15 +16,12 @@ public class PlayerStats : MonoBehaviour
             _followCamera.MoveCamera(this);
     }
 
+    public void ChangeCountCoints() =>
+        _walletCoints.AddCoin();
+
     public void Instans(InputManager inputManager, FollowCamera followCamera)
     {
         _followCamera = followCamera;
         TakeInputManager?.Invoke(inputManager);
-    }
-
-    public void ChangeCountCoints()
-    {
-        _walletCoints.AddCoin();
-        Debug.Log(_walletCoints.ScoreCoints);
     }
 }
